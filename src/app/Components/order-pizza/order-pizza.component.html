@@ -1,0 +1,74 @@
+<div class="container">
+
+    <div class="card mt-3">
+        <div class="card-header mb-2">
+            Pizzas
+        </div>
+        <div class="d-flex mb-2">
+            <button class="btn btn-outline-primary btn-sm mx-2" (click)="addSmallPizza()">Small</button>
+            <button class="btn btn-outline-secondary btn-sm me-2" (click)="addMediumPizza()">Medium</button>
+            <button class="btn btn-outline-success btn-sm me-2" (click)="addLargePizza()">Large</button>
+            <button class="btn btn-outline-danger btn-sm me-2" (click)="addExtraLargePizza()">ExtraLarge</button>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-header mb-2">
+            Vegetable Toppings
+        </div>
+        <div class="d-flex mb-2">
+            <button class="btn btn-outline-warning btn-sm mx-2" (click)="addTomatoes()">Tomatoes</button>
+            <button class="btn btn-outline-info btn-sm me-2" (click)="addOnions()">Onions</button>
+            <button class="btn btn-outline-dark btn-sm me-2" (click)="addBellPepper()">Bell Pepper</button>
+            <button class="btn btn-outline-primary btn-sm me-2" (click)="addMushrooms()">Mushrooms</button>
+            <button class="btn btn-outline-secondary btn-sm me-2" (click)="addPineapple()">Pineapple</button>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-header mb-2">
+            NonVegetable Toppings
+        </div>
+        <div class="d-flex mb-2">
+            <button class="btn btn-outline-success btn-sm mx-2" (click)="addSausage()">Sausage</button>
+            <button class="btn btn-outline-danger btn-sm me-2" (click)="addPepperoni()">Pepperoni</button>
+            <button class="btn btn-outline-warning btn-sm me-2" (click)="addBarbecueChicken()">Barbecue Chicken</button>
+        </div>
+    </div>
+
+
+
+
+
+    <table class="table table-bordered table-striped mt-3" *ngIf="order.PriceAfterDiscount>0">
+        <thead>
+            <tr>
+                <th>Items</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pizza of order.Pizzas">
+                <td>{{pizza.Name}}</td>
+                <td>{{pizza.Price}}</td>
+            </tr>
+            <tr *ngFor="let topping of order.Toppings">
+                <td>{{topping.Name}}</td>
+                <td>{{topping.Price}}</td>
+            </tr>
+            <tr class="table-active">
+                <td>
+                    <div *ngIf="order.Offer">
+                        <h5>{{order.Offer.Name}}</h5>
+                    </div>
+                </td>
+                <th>
+                    <del class="fs-4" *ngIf="order.Offer">{{order.Price}}</del>
+                    <span class="ps-3 fs-3">{{order.PriceAfterDiscount | currency}}</span>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
