@@ -1,0 +1,50 @@
+[
+    {
+        "Name" : "Barbecue Chicken",
+        "Kind" : 1,
+        "Price" : 3,
+        "Value" : 2
+    },
+    {
+        "Name" : "Bell Pepper",
+        "Kind" : 0,
+        "Price" : 1,
+        "Value" : 1
+    },
+    {
+        "Name" : "Mushroom",
+        "Kind" : 0,
+        "Price" : 1.2,
+        "Value" : 1
+    },
+    {
+        "Name" : "Onions",
+        "Kind" : 0,
+        "Price" : 0.5,
+        "Value" : 1
+    },
+    {
+        "Name" : "Pepperoni",
+        "Kind" : 1,
+        "Price" : 2,
+        "Value" : 2
+    },
+    {
+        "Name" : "Pineapple",
+        "Kind" : 0,
+        "Price" : 0.75,
+        "Value" : 1
+    },
+    {
+        "Name" : "Sausage",
+        "Kind" : 1,
+        "Price" : 1,
+        "Value" : 1
+    },
+    {
+        "Name" : "Tomatoes",
+        "Kind" : 0,
+        "Price" : 1,
+        "Value" : 1
+    }
+]

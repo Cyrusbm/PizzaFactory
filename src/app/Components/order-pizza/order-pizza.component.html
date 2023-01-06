@@ -5,10 +5,7 @@
             Pizzas
         </div>
         <div class="d-flex mb-2">
-            <button class="btn btn-outline-primary btn-sm mx-2" (click)="addSmallPizza()">Small</button>
-            <button class="btn btn-outline-secondary btn-sm me-2" (click)="addMediumPizza()">Medium</button>
-            <button class="btn btn-outline-success btn-sm me-2" (click)="addLargePizza()">Large</button>
-            <button class="btn btn-outline-danger btn-sm me-2" (click)="addExtraLargePizza()">ExtraLarge</button>
+            <button *ngFor="let pizza of pizzas |async" class="btn btn-outline-primary btn-sm mx-2" (click)="addPizza(pizza)">{{pizza.Name}}</button>
         </div>
     </div>
 
@@ -17,11 +14,7 @@
             Vegetable Toppings
         </div>
         <div class="d-flex mb-2">
-            <button class="btn btn-outline-warning btn-sm mx-2" (click)="addTomatoes()">Tomatoes</button>
-            <button class="btn btn-outline-info btn-sm me-2" (click)="addOnions()">Onions</button>
-            <button class="btn btn-outline-dark btn-sm me-2" (click)="addBellPepper()">Bell Pepper</button>
-            <button class="btn btn-outline-primary btn-sm me-2" (click)="addMushrooms()">Mushrooms</button>
-            <button class="btn btn-outline-secondary btn-sm me-2" (click)="addPineapple()">Pineapple</button>
+            <button *ngFor="let topping of vegToppings | async" class="btn btn-outline-success btn-sm mx-2" (click)="addTopping(topping)">{{topping.Name}}</button>
         </div>
     </div>
 
@@ -30,9 +23,7 @@
             NonVegetable Toppings
         </div>
         <div class="d-flex mb-2">
-            <button class="btn btn-outline-success btn-sm mx-2" (click)="addSausage()">Sausage</button>
-            <button class="btn btn-outline-danger btn-sm me-2" (click)="addPepperoni()">Pepperoni</button>
-            <button class="btn btn-outline-warning btn-sm me-2" (click)="addBarbecueChicken()">Barbecue Chicken</button>
+            <button *ngFor="let topping of nonVegToppings | async" class="btn btn-outline-danger btn-sm mx-2" (click)="addTopping(topping)">{{topping.Name}}</button>
         </div>
     </div>
 

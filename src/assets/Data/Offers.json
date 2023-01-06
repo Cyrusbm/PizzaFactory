@@ -1,0 +1,49 @@
+[
+    {
+        "Name" : "1 Large Pizza with 4 Toppings = %50",
+        "Pizzas" : 
+        [
+            {
+                "Name":"Large Pizza",
+                "Kind":2,
+                "Price":8
+            }
+        ],
+        "ToppingsValue" : 4,
+        "DiscountPrice" : 0,
+        "DiscountPercentage" :0.5
+    },
+    {
+        "Name" : "2 Medium Pizza with 4 Toppings each = $9",
+        "Pizzas" : 
+        [
+            {
+                "Name":"Medium Pizza",
+                "Kind":1,
+                "Price":7
+            },
+            {
+                "Name":"Medium Pizza",
+                "Kind":1,
+                "Price":7
+            }
+        ],
+        "ToppingsValue" : 8,
+        "DiscountPrice" : 9,
+        "DiscountPercentage" :0
+    },
+    {
+        "Name" : "1 Medium Pizza with 2 Toppings = $5",
+        "Pizzas" : 
+        [
+            {
+                "Name":"Medium Pizza",
+                "Kind":1,
+                "Price":7
+            }
+        ],
+        "ToppingsValue" : 2,
+        "DiscountPrice" : 5,
+        "DiscountPercentage" :0
+    }
+]

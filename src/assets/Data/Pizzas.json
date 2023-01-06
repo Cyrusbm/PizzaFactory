@@ -1,0 +1,22 @@
+[
+    {
+        "Name":"Small Pizza",
+        "Kind":0,
+        "Price":5
+    },
+    {
+        "Name":"Medium Pizza",
+        "Kind":1,
+        "Price":7
+    },
+    {
+        "Name":"Large Pizza",
+        "Kind":2,
+        "Price":8
+    },
+    {
+        "Name":"Extra Large Pizza",
+        "Kind":3,
+        "Price":9
+    }
+]

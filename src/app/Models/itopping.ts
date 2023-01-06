@@ -6,6 +6,6 @@ export interface ITopping {
 }
 
 export enum ToppingKind {
-    Vegetable = 'Vegetable',
-    NonVegetable = 'NonVegetable'
+    Vegetable,
+    NonVegetable
 }

@@ -1,3 +1,4 @@
+import { Observable } from "rxjs";
 import { IOffer } from "./ioffer";
 import { IPizza, PizzaKind } from "./ipizza";
 import { ITopping } from "./itopping";
@@ -37,7 +38,10 @@ export class Order {
     }
     
     private _availableOffers: IOffer[] = [];
-    constructor(availableOffers: IOffer[]) {
-        this._availableOffers = availableOffers;
+
+    constructor(availableOffers: Observable<IOffer[]>) {
+        availableOffers.subscribe(data=>{
+            this._availableOffers = data;
+        })
     }
 }

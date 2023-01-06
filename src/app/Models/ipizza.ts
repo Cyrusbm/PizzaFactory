@@ -5,9 +5,9 @@ export interface IPizza {
 }
 
 export enum PizzaKind{
-    Small = 'Small',
-    Medium = 'Medium',
-    Large = 'Large',
-    ExtraLarge = 'ExtraLarge'
+    Small,
+    Medium,
+    Large,
+    ExtraLarge
 }
 
